@@ -3,8 +3,10 @@ import time
 # Importing the two libraries
 from customtkinter import *
 
+from SupabaseLoader import SupabaseLoader
+
 # Creating the window and making it fullscreen with tkinter
-root = Tk()
+""" root = Tk()
 root.attributes('-fullscreen', True)
 
 # Adding modern-looking widgets with customtkinter
@@ -16,3 +18,6 @@ label.pack()
 
 # Calling the mainloop
 root.mainloop()
+ """
+
+print(SupabaseLoader.load("items"))

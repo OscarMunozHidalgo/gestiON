@@ -3,4 +3,8 @@ Stock and sales python application with GUI and AI predictions over restock, exp
 
 ## Requirements
 - Python 3.13.7
+- Python libraries
 - customtkinter
+- tkinter
+- supabase
+- dotenv
