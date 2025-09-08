@@ -1,10 +1,12 @@
 from tkinter import *
 import time
-# Importing the two libraries
 from customtkinter import *
 
-from SupabaseLoader import SupabaseLoader
+from Supabase import *
+from Item import *
+from dotenv import load_dotenv
 
+load_dotenv()
 # Creating the window and making it fullscreen with tkinter
 """ root = Tk()
 root.attributes('-fullscreen', True)
@@ -19,5 +21,14 @@ label.pack()
 # Calling the mainloop
 root.mainloop()
  """
+url= os.environ.get("SUPABASE_URL")
+key = os.environ.get("SUPABASE_KEY")
+database = Supabase(url, key)
 
-print(SupabaseLoader.load("items"))
+print(database.getTable("items"))
+
+item = Item("name", "description", 12.50)
+
+print(database.addRow("items",item.format()))
+
+print(database.getTable("items"))
