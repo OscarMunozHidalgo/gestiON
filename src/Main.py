@@ -27,8 +27,6 @@ database = Supabase(url, key)
 
 print(database.getTable("items"))
 
-item = Item("name", "description", 12.50)
+print(database.addRow("stock",item.queryAttributes()))
 
-print(database.addRow("items",item.format()))
-
-print(database.getTable("items"))
+print(database.getTable("stock"))
