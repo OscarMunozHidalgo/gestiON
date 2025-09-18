@@ -1,11 +1,11 @@
 class Item:
-    def __init__(self, name, description, price, stock, available, image_url):
+    def __init__(self, name, description, price, stock, available, image):
         self.name = name
         self.description = description
         self.price = price
         self.stock = stock
         self.available = available
-        self.image_url = image_url
+        self.image = image
 
     def setName(self, name):
         self.name = name
@@ -22,11 +22,11 @@ class Item:
     def setAvailable(self, availability):
         self.available = availability
 
-    def setImage(self, image_url):
-        self.image_url = image_url
+    def setImage(self, image):
+        self.image = image
 
     def setId(self, id):
         self.id = id
 
     def queryAttributes(self):
-        return {"name":self.name, "description":self.description, "price":self.price, "stock":self.stock, "available":self.available, "image_url":self.image_url}
+        return {"name":self.name, "description":self.description, "price":self.price, "stock":self.stock, "available":self.available, "image_url":self.image}

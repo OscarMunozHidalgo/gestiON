@@ -25,7 +25,7 @@ url= os.environ.get("SUPABASE_URL")
 key = os.environ.get("SUPABASE_KEY")
 database = Supabase(url, key)
 
-print(database.getTable("items"))
+item = Item("test", "this is a test item", 420.69, 100, False, None)
 
 print(database.addRow("stock",item.queryAttributes()))
 
