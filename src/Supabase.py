@@ -13,7 +13,7 @@ class Supabase:
         return self.reference.table(table).insert(element).execute()
     
     def updateRow(self, table, rowId, newRow):
-        return self.reference.table(table).update(newRow).eq("id", rowId)
+        return self.reference.table(table).update(newRow).eq("id", rowId).execute()
 
     def deleteRow(self, table, rowId):
         return self.reference.table(table).delete().eq("id",rowId).execute()

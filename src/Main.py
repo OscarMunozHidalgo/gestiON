@@ -1,15 +1,20 @@
 from tkinter import *
-import time
+import os
 from customtkinter import *
 
 from Supabase import *
-from Item import *
 from dotenv import load_dotenv
+
+from Controller import *
+from Item import *
+
+
+controller = Controller()
 
 load_dotenv()
 # Creating the window and making it fullscreen with tkinter
-""" root = Tk()
-root.attributes('-fullscreen', True)
+root = Tk()
+root.attributes('-fullscreen', False)
 
 # Adding modern-looking widgets with customtkinter
 button = CTkButton(root, text="Press me", fg_color="blue", font=("Arial", 30))
@@ -20,7 +25,7 @@ label.pack()
 
 # Calling the mainloop
 root.mainloop()
- """
+
 url= os.environ.get("SUPABASE_URL")
 key = os.environ.get("SUPABASE_KEY")
 database = Supabase(url, key)
