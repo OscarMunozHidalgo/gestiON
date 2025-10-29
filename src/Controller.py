@@ -1,11 +1,11 @@
 import Item
 
 class Controller:
-    def __init__(self):
-        pass
+    def __init__(self, data):
+        self.data = data
 
-    def setCurrentDatabase(self, database):
-        self.database = database
+    def setCurrentData(self, newData):
+        self.data = newData
 
-    def setTables(self, tables):
-        self.tables = tables
+    def addRow(self, table, newrow):
+        return self.data.addRow(table, newrow)
