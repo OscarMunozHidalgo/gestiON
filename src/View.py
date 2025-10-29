@@ -2,6 +2,7 @@ import customtkinter as ctk
 from Controller import *
 from Supabase import *
 from Item import *
+from components import SidebarFrame
 
 class View(ctk.CTk):
     def __init__(self, controller):
@@ -16,6 +17,7 @@ class View(ctk.CTk):
         self.button = ctk.CTkButton(self, text="Press me", fg_color="blue", font=("Arial", 30), command=self.button_callbck)
         self.label = ctk.CTkLabel(self, text="Hello world", text_color="green", font=("Arial", 25))
         self.scrollableFrame = ctk.CTkScrollableFrame(self)
+
 
         self.button.pack(pady=50)
         self.label.pack()
