@@ -19,5 +19,7 @@ database = Supabase(url, key)
 
 controller = Controller(database)
 
+ctk.set_appearance_mode("system")
+
 app = View(controller)
 app.mainloop()
